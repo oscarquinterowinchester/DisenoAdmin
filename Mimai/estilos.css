@@ -1,0 +1,430 @@
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+/*
+.active, .dot:hover {
+  background-color: #717171;
+}*/
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+body {margin:0;font-family:Arial}
+
+.topnav {
+    overflow: hidden;
+    background-color: #ffffff;
+    /*justify-content: center;*/
+    align-items: center;       
+    padding: 14px 16px;
+    display: flex;    
+    justify-content: space-between;
+    /*max-width: 1024px;*/
+}
+
+.topnav a {
+    
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 10px 0px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/*.topnav p {
+    float:0;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding-left: 150px;
+    text-decoration: none;
+    font-size: 17px;
+}*/
+
+
+.topnav a.active {  
+    color: #febe10;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    /*float: left;
+    overflow: hidden;*/
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 0px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.dropdown .dropbtn {
+    
+    font-size: 15px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00723F;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;  
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: transparent;
+    color:  #ffffff;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#pie{
+    background-color: black;
+    color: white;	
+}
+#info{
+    background-color: #34529F;	
+    color: #fff;
+    font-weight: none;
+    line-height: 24pt;	
+}
+.footer p{
+    padding: 0pt 12pt 12pt 12pt;
+}
+.linea{
+    text-align: center;
+    width: 100%;
+}
+#info h2{	
+    color: #fff;
+    font-family: 'Helvetica';
+    margin-bottom: 0;
+    text-transform: none;
+    font-size: 12pt;
+}
+#info a{	
+    color: #ffffff;
+    text-decoration: none;
+}
+#redes{
+    padding-top: 2pt;
+    text-align: center;
+}
+.unidades{   
+    line-height : 20px;
+    margin-top: 0px;
+}
+.unidades h4{
+    color: #febe10;
+    text-decoration: underline;	
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.grid-container {  
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;  
+    gap: 40pt;
+    padding-bottom: 10px;
+    font-size: 11pt;
+}
+
+.grid-container > div {  
+    text-align: left;
+}
+.container{
+    padding-left: 200pt;
+}
+#fondo{
+    /*background: green;*/
+    /*
+    background-image: url('img/isotipo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    */
+    padding-bottom: 20pt;		
+    width: 100%;		
+}
+
+/* declaramos un color, un ancho y una altura*/
+#contenido, #directorio{        
+    padding-top: 20pt;
+    width: 80%;       
+    margin: 0 auto;
+}
+#contenido h3, #directorio h3{
+    color: #3A3A3A;
+    font-size: 20pt;
+}
+
+#directorio p{
+    text-align: center;
+}
+.mobile-break { display: none; }
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav 
+    {
+        display:block;    
+    }
+    .linea img{max-width: 350px;}  
+
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative; display:block;  }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .mobile-break { display: block; }
+    .grid-container {  display: block;}
+    .container{padding-left: 5pt;}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 601px)  {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav 
+    {
+        display:block;    
+    }
+    .linea img{max-width: 600px;}  
+}
+@media only screen and (max-width: 1024px) and (min-width: 601px)  {
+    .topnav.responsive {position: relative; display:block;  }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .mobile-break { display: block; }
+    .grid-container {  display: block;}
+    .container{padding-left: 5pt;}
+}
+#fondo_directorio{        
+    padding-bottom: 20pt;		
+    width: 80%;	 
+    margin: 0 auto;    
+}
+#tdirectorio{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;    
+}
+
+#tdirectorio td, #tdirectorio th {
+    /*border: 1px solid #ddd;*/
+    padding: 8px;
+}
+
+#tdirectorio tr:nth-child(even){background-color: #F1F1E5;}
+
+#tdirectoro tr:hover {background-color: #ddd;}
+
+#tdirectorio th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+.title-iframe {
+    width: 80%;
+    margin: 10pt auto;
+    color: #3A3A3A;
+    font-size: 20pt;
+}
+.container-iframe {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin: 0 auto;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.boton{
+    width:100px;
+    height:30px;
+    background-color:#34529F;
+    margin: 5px;
+    padding:10px;
+    margin-right: 45px;
+    margin-top: 15px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 15px;
+    font-size:11px;
+    float:left;
+  }
+  .boton:hover{
+    opacity: 0.50;
+    -moz-opacity: .50;
+    filter:alpha (opacity=50);
+  }
+  .boton a{
+    color:#fff;
+    text-decoration:none;
+    padding:0px 5px 5px 0px;
+  }
